@@ -24,10 +24,10 @@ const Userselect = () => {
       </div>
       <div className='m-auto mt-2 flex flex-col space-y-6'>
         <Link to="/customerlogin">
-          <button className='text-2xl mx-2 bg-transparent hover:bg-teal-200 text-teal-600 py-3 px-10 rounded-md border-2 border-teal-400'> CUSTOMER </button>
+          <button className='custom-body-font text-2xl mx-2 bg-transparent hover:bg-teal-200 text-teal-600 py-3 px-10 rounded-md border-2 border-teal-400'> CUSTOMER </button>
         </Link>
         <Link to="/stafflogin">
-          <button className='text-2xl mx-2 bg-transparent hover:bg-teal-200 text-teal-600 py-3 px-10 rounded-md border-2 border-teal-400'> CAFE STAFF </button>
+          <button className='custom-body-font text-2xl mx-2 bg-transparent hover:bg-teal-200 text-teal-600 py-3 px-10 rounded-md border-2 border-teal-400'> CAFE STAFF </button>
         </Link>
       </div>
     </div>
