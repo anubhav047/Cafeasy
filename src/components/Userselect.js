@@ -1,19 +1,37 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import cafeasyImage from '../images/CAFEASY-LOGO-removebg.png';
+import foodBackgroundImage from '../images/food-background.jpeg'; // Import the background image
 
 const Userselect = () => {
+  // Define a CSS style object to set the background image
+  const appStyle = {
+    backgroundImage: `url(${foodBackgroundImage})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    minHeight: '100vh',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+  };
+
   return (
-    <div className="App flex justify-center items-center h-screen">
-      <div className='m-auto flex flex-col space-y-10'>
+    <div className="App" style={appStyle}>
+      <div className='text-center'>
+        <img src={cafeasyImage} alt="Cafeasy" className="mx-auto mt-10 mb-4 max-w-lg h-auto" />
+      </div>
+      <div className='m-auto mt-2 flex flex-col space-y-6'>
         <Link to="/customerlogin">
-        <button className='text-2xl mx-2 bg-transparent hover:bg-violet-100 text-violet-400 py-3 px-10 rounded-md border-2 border-violet-200'> CUSTOMER </button>
-        </Link >
+          <button className='text-2xl mx-2 bg-transparent hover:bg-teal-200 text-teal-600 py-3 px-10 rounded-md border-2 border-teal-400'> CUSTOMER </button>
+        </Link>
         <Link to="/stafflogin">
-        <button className='text-2xl mx-2 bg-transparent hover:bg-violet-100 text-violet-400 py-3 px-10 rounded-md border-2 border-violet-200'> CAFE STAFF </button>
+          <button className='text-2xl mx-2 bg-transparent hover:bg-teal-200 text-teal-600 py-3 px-10 rounded-md border-2 border-teal-400'> CAFE STAFF </button>
         </Link>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Userselect
+export default Userselect;
