@@ -1,13 +1,19 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
+import Userselect from './components/Userselect';
+import Customerlogin from './components/Customerlogin';
+import Stafflogin from './components/Stafflogin';
+
 
 function App() {
   return (
-    <div className="App flex justify-center items-center h-screen">
-      <div className='m-auto flex flex-col space-y-10'>
-        <button className='text-2xl mx-2 bg-transparent hover:bg-violet-100 text-violet-400 py-3 px-10 rounded-md border-2 border-violet-200'> CUSTOMER </button>
-        <button className='text-2xl mx-2 bg-transparent hover:bg-violet-100 text-violet-400 py-3 px-10 rounded-md border-2 border-violet-200'> CAFE STAFF </button>
-      </div>
-    </div>
+    <BrowserRouter>
+       <Routes>
+       <Route exact path="/" element={<Userselect/>}></Route>
+       <Route exact path="/customerlogin" element={<Customerlogin/>}></Route>
+       <Route exact path="/stafflogin" element={<Stafflogin/>}></Route>
+       </Routes>
+    </BrowserRouter>
   );
 }
 
