@@ -43,6 +43,47 @@ const Customerhome = () => {
 
         <div className="flex shadow-md my-10">
           <div className="bg-white px-10 py-10" style={{ width: "100%" }}>
+            <div className='custom-heading-font mx-auto text-center text-3xl text-slate-600'>
+              About Us
+            </div>
+                <div className='custom-body-font mt-8 mb-10 pb-6 text-center text-xl text-slate-500'>
+                Cafeasy is an online cafeteria portal created for college members, including students, faculty, and cafeteria staff. Traditional cafeteria systems often grapple with challenges like order management inefficiencies, uncertain waiting times, and the lack of real-time information for customers. Cafeasy is an online cafeteria portal created for college members, including students, faculty, and cafeteria staff. Traditional cafeteria systems often grapple with challenges like order management inefficiencies, uncertain waiting times, and the lack of real-time information for customers.
+                </div>
+
+            <hr className="hr-style mx-auto mb-6 pb-8 border-8 border-none border-gray-400" />
+
+            <div className='custom-heading-font mx-auto text-center text-3xl text-slate-600 mb-12'>
+              Dish of the Day
+            </div>
+
+              <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5 mb-6">
+                <div class="flex w-2/5"> 
+                  <div class="w-20">
+                    <img class="h-24" src="https://static.toiimg.com/thumb/61050397.cms?imgsize=246859&width=800&height=800" alt=""/>
+                  </div>
+                  <div class="flex flex-col justify-center ml-4 flex-grow">
+                    <span class="font-bold text-sm">Samosa</span>
+                  </div>
+                </div>
+                <div class="flex justify-center w-1/5">
+                  <svg class="fill-current text-gray-600 w-3" viewBox="0 0 448 512"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
+                  </svg>
+
+                  <input class="mx-2 border text-center w-8" type="text" value="1"/>
+
+                  <svg class="fill-current text-gray-600 w-3" viewBox="0 0 448 512">
+                    <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
+                  </svg>
+                </div>
+                <span class="text-center w-1/5 font-semibold text-sm">Rs.10</span>
+              </div>
+
+            <hr className="hr-style mx-auto mb-6 pb-8 border-8 border-none border-gray-400" />
+
+            <div className='custom-heading-font mx-auto text-center text-3xl text-slate-600 mb-12'>
+              Cafe Menu
+            </div>
+
             <div className="flex mt-10 mb-5">
               <h3 className="custom-body-font font-semibold text-gray-600 text-s uppercase w-2/5">Food Items</h3>
               <h3 className="custom-body-font font-semibold text-gray-600 text-s uppercase w-1/5 text-center">Quantity</h3>
@@ -125,6 +166,12 @@ const Customerhome = () => {
         </div>
 
       </div>
+
+      {/* <!-- BOTTOM CONTAINER --> */}
+      <div className="bottom-container bg-lime-200 py-20 pb-20">
+            <p className="text-gray-600 text-center custom-body-font">© Cafeasy.</p>
+      </div>
+
     </>
   )
 }

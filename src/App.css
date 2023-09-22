@@ -5,3 +5,10 @@
 .custom-heading-font {
     font-family: Architects Daughter, sans-serif;
 }
+
+.hr-style {
+    border-top-style: dotted;
+    width: 10%;
+}
+
+  
