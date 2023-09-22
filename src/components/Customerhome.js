@@ -74,11 +74,6 @@ const Customerhome = () => {
 
         <div className="flex shadow-md my-10">
           <div className="bg-white px-10 py-10" style={{ width: "100%" }}>
-            <div className="flex mt-10 mb-5">
-              <h3 className="custom-body-font font-semibold text-gray-600 text-s uppercase w-2/5">Food Items</h3>
-              <h3 className="custom-body-font font-semibold text-gray-600 text-s uppercase w-1/5 text-center">Quantity</h3>
-              <h3 className="custom-body-font font-semibold text-gray-600 text-s uppercase w-1/5 text-center">Price</h3>
-            </div>
             <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
               <div class="flex w-2/5"> 
                 <div class="w-20">
@@ -105,11 +100,6 @@ const Customerhome = () => {
 
         <div className="flex shadow-md my-10">
           <div className="bg-white px-10 py-10" style={{ width: "100%" }}>
-            <div className="flex mt-10 mb-5">
-              <h3 className="custom-body-font font-semibold text-gray-600 text-s uppercase w-2/5">Food Items</h3>
-              <h3 className="custom-body-font font-semibold text-gray-600 text-s uppercase w-1/5 text-center">Quantity</h3>
-              <h3 className="custom-body-font font-semibold text-gray-600 text-s uppercase w-1/5 text-center">Price</h3>
-            </div>
             <div className="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
               <div class="flex w-2/5"> 
                 <div class="w-20">
