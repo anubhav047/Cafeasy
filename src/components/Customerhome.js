@@ -151,6 +151,10 @@ const Customerhome = () => {
                   <span class="text-center w-1/5 font-semibold text-sm">
                     Rs.{element.price}
                   </span>
+                  <div style={{ cursor: "pointer" }}
+                    onClick={() => {
+                      handleadd(element);
+                    }} >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -158,10 +162,6 @@ const Customerhome = () => {
                     strokeWidth={1.5}
                     stroke="currentColor"
                     className="w-6 h-6"
-                    style={{ cursor: "pointer" }}
-                    onClick={() => {
-                      handleadd(element);
-                    }}
                   >
                     <path
                       strokeLinecap="round"
@@ -170,6 +170,7 @@ const Customerhome = () => {
                     />
                   </svg>
                   <span class="font-bold text-sm">Add 1</span>
+                  </div>
                 </div>
               );
             })}
