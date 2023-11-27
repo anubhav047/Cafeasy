@@ -2,11 +2,16 @@ import React from "react";
 import Customernavbar from "./Customernavbar";
 import { useDispatchCart, useCart } from "./ContextReducer";
 import { useEffect, useState } from "react";
+import { toast} from 'react-toastify';
+
 
 const Customercart = () => {
   let dispatch = useDispatchCart();
   let data = useCart();
   const [totalPrice, settotalPrice] = useState(0);
+
+  const notifysuccess = (msg) => toast.success(msg);
+
   useEffect(() => {
     let p = 0;
     for (const item of data) {
@@ -31,6 +36,7 @@ const Customercart = () => {
     console.log("JSON RESPONSE:::::", response.status);
     if (response.status === 200) {
       dispatch({ type: "DROP" });
+      notifysuccess(`Order Placed succeessfully...`);
     }
   };
 

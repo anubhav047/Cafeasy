@@ -6,6 +6,7 @@ import Stafflogin from './components/Stafflogin';
 import Customerhome from './components/Customerhome';
 import Customercart from './components/Customercart';
 import Customerseat from './components/Customerseat';
+import Staffseat from './components/Staffseat';
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { CartProvider } from './components/ContextReducer';
@@ -24,6 +25,7 @@ function App() {
        <Route exact path="/staffhome" element={<Staffhome/>}></Route>
        <Route exact path="/customercart" element={<Customercart/>}></Route>
        <Route exact path="/customerseat" element={<Customerseat/>}></Route>
+       <Route exact path="/staffseat" element={<Staffseat/>}></Route>
        </Routes>
        <ToastContainer/>
     </BrowserRouter>

@@ -5,7 +5,7 @@ const { Schema } = mongoose;
 const OrderSchema = new Schema({
     number: {
         type: String,
-        required: true
+        required: true,
     },
     order_date:{
         type:String,

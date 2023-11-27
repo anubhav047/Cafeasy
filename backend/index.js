@@ -13,6 +13,8 @@ connectToMongo();
 app.use(require("./routes/user"));
 app.use(require("./routes/food"));
 app.use(require("./routes/order"));
+app.use(require("./routes/seat"));
+
 
 app.listen(port, () => {
   console.log(`Backend listening on port ${port}`)

@@ -3,6 +3,7 @@ import Customernavbar from "./Customernavbar";
 import foodHeaderBgImage from "../images/food-bg-header.jpeg";
 import { useState } from "react";
 import { useEffect } from "react";
+import StaffNavbar from "./StaffNavbar";
 
 const Staffhome = () => {
   const [orders, setorders] = useState([]);
@@ -47,14 +48,44 @@ const Staffhome = () => {
   const handledone = async (orderId) => {
     const res = await fetch(`http://localhost:2000/deleteorder/${orderId}`, {
       method: "delete",
-      body: JSON.stringify({ orderId }),
+      body: JSON.stringify({ orderId ,number:localStorage.getItem('number')}),
     });
     const parsed = await res.json();
+    console.log(parsed);
     if (parsed) getorders();
+    const resp = await fetch(`http://localhost:2000/sms/${parsed.order.number}`, {
+      method: "post"
+    });
   };
+
+  // const handledone = async (orderId) => {
+  //   const res = await fetch(`http://localhost:2000/deleteorder/${orderId}`, {
+  //     method: "delete",
+  //     body: JSON.stringify({ orderId ,number:localStorage.getItem('number')}),
+  //   });
+  //   const parsed = await res.json();
+  //   console.log(parsed);
+  //   if (parsed) getorders();
+  //   const resp = await fetch("https://www.fast2sms.com/dev/bulkV2", {
+  //     method: "post",
+  //     headers:{
+  //       "authorization":"JSowMs65XAj7utbnLpYRcTgPfDI1h2KmHOGr08yzekdFlWaQZU9J7f2uojrGBPkSlO0CyWxgbNVhnDm3",
+  //       "Content-Type":"application/json"
+  //     },
+  //     body:{
+  //       "route" : "q",
+  //       "message" : "ORDER PREPARED",
+  //       "flash" : 0,
+  //       "numbers" : "9084858329",
+  //     }
+  //   });
+  //   const parsed1 = await resp.json();
+  //   console.log(parsed1);
+  // };
 
   return (
     <>
+    <StaffNavbar/>
     <div class="container mx-auto mt-10" style={{ width: "60vw" }}>
         <div class="flex shadow-md my-10">
           <div class="bg-white px-10 py-10" style={{width:"100%",margin:"20px"}}>
