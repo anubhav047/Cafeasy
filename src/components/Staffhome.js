@@ -1,5 +1,4 @@
 import React from "react";
-import Customernavbar from "./Customernavbar";
 import foodHeaderBgImage from "../images/food-bg-header.jpeg";
 import { useState } from "react";
 import { useEffect } from "react";

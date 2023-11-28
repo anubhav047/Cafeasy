@@ -6,6 +6,7 @@ import { toast} from 'react-toastify';
 
 
 const Customercart = () => {
+  const [orders, setorders] = useState([]);
   let dispatch = useDispatchCart();
   let data = useCart();
   const [totalPrice, settotalPrice] = useState(0);
@@ -18,6 +19,7 @@ const Customercart = () => {
       p = p + item.qty * item.price;
     }
     settotalPrice(p);
+    getorders();
   }, [data]);
 
   const handleCheckOut = async () => {
@@ -40,10 +42,21 @@ const Customercart = () => {
     }
   };
 
+  const getorders = async () => {
+    const res = await fetch("http://localhost:2000/fetchorders", {
+      method: "get",
+    });
+    const parsed = await res.json();
+    setorders(parsed);
+  };
+
   if (data.length === 0) {
     return (
       <div>
         <Customernavbar />
+        <div className="custom-heading-font mx-auto text-center text-3xl text-slate-600">
+              {orders.length} orders are currently in queue
+            </div>
         <div className="m-5 w-100 text-center fs-3">The Cart is Empty!</div>
       </div>
     );
@@ -55,6 +68,9 @@ const Customercart = () => {
       <div class="container mx-auto mt-10" style={{ width: "60vw" }}>
         <div class="flex shadow-md my-10">
           <div class="w-3/4 bg-white px-10 py-10">
+          <div className="custom-heading-font mx-auto text-center text-3xl text-slate-600">
+              {orders.length} orders are currently in queue
+            </div>
             <div class="flex justify-between border-b pb-8">
               <h1 class="font-semibold text-2xl">Cart</h1>
             </div>
@@ -98,10 +114,10 @@ const Customercart = () => {
                   </span>
                 </div>
                 <span class="text-center w-1/5 font-semibold text-sm">
-                  ${food.price}
+                  Rs.{food.price}
                 </span>
                 <span class="text-center w-1/5 font-semibold text-sm">
-                  ${food.price * food.qty}
+                  Rs.{food.price * food.qty}
                 </span>
               </div>
             ))}
@@ -112,7 +128,7 @@ const Customercart = () => {
             <div class="mt-8">
               <div class="flex font-semibold justify-between py-6 text-sm uppercase">
                 <span>Total cost</span>
-                <span>${totalPrice}</span>
+                <span>Rs.{totalPrice}</span>
               </div>
               <button class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full" onClick={handleCheckOut}>
                 Checkout
