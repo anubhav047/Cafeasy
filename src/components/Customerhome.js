@@ -122,9 +122,9 @@ const Customerhome = () => {
               <h3 className="custom-body-font font-semibold text-gray-600 text-s uppercase w-2/5">
                 Food Items
               </h3>
-              <h3 className="custom-body-font font-semibold text-gray-600 text-s uppercase w-1/5 text-center">
+              {/* <h3 className="custom-body-font font-semibold text-gray-600 text-s uppercase w-1/5 text-center">
                 Quantity Available
-              </h3>
+              </h3> */}
               <h3 className="custom-body-font font-semibold text-gray-600 text-s uppercase w-1/5 text-center">
                 Price
               </h3>
@@ -144,9 +144,9 @@ const Customerhome = () => {
                       <span class="font-bold text-sm">{element.name}</span>
                     </div>
                   </div>
-                  <div class="flex justify-center w-1/5">
+                  {/* <div class="flex justify-center w-1/5">
                     <span class="font-bold text-sm">{element.quantity}</span>
-                  </div>
+                  </div> */}
                   <span class="text-center w-1/5 font-semibold text-sm">
                     Rs.{element.price}
                   </span>
