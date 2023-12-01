@@ -3,7 +3,7 @@ const router = express.Router();
 const seats = require("../models/seats");
 
 router.get("/fetchseats", async (req, res) => {
-  const data = await seats.find();
+  const data = await seats.find().sort({"no":1});
   res.status(200).json(data);
 });
 
